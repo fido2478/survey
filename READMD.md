@@ -8,3 +8,8 @@ $ npm install --save express
 $ npm install --save passport passport-google-oauth20
 $ npm install --save nodemon
 ```
+
+## Execution
+```bash
+$ node run dev
+```
