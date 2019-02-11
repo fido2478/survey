@@ -8,6 +8,7 @@ $ npm install --save express
 $ npm install --save passport passport-google-oauth20
 $ npm install --save nodemon
 $ npm install --save mongoose
+$ npm install --save cookie-session
 ```
 nodemon is optional, which helps you to get around reruning the app whenever you change your code.
 
