@@ -15,8 +15,9 @@ module.exports = app => {
       res.redirect('/surveys');
     }
   );
-  
+
   app.get('/api/logout', (req, res) => {
+    // take the cookie that contains user ID and kill the ID 
     req.logout();
     res.redirect('/');
   });
