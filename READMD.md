@@ -9,8 +9,12 @@ $ npm install --save passport passport-google-oauth20
 $ npm install --save nodemon
 $ npm install --save mongoose
 $ npm install --save cookie-session
+$ sudo npm install -g create-react-app
+$ npm install --save concurrently
 ```
 nodemon is optional, which helps you to get around reruning the app whenever you change your code.
+If you run into an error "Unhandled rejection Error: EISDIR: illegal operation on a directory...",
+downgrade npm to 6.4.1 by running npm install npm@6.4.1
 
 ## Execution
 ```bash
