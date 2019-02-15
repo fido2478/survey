@@ -1,7 +1,7 @@
 // All Redux setup is here!
 // All data setup is here!
 // css can be imported in index.js or App.js
-import materializeCSS from 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
