@@ -16,6 +16,12 @@ nodemon is optional, which helps you to get around reruning the app whenever you
 If you run into an error "Unhandled rejection Error: EISDIR: illegal operation on a directory...",
 downgrade npm to 6.4.1 by running npm install npm@6.4.1
 
+```bash
+$ rm client/src/index.js client/src/App.js 
+$ cd client
+client $ npm install --save redux react-redux react-router-dom
+```
+
 ## Execution
 ```bash
 $ node run dev
