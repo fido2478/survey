@@ -10,6 +10,9 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const handleToken = (token) => async dispatch => {
+    // send the token from Stripe to the back-end server and then
+    // get the user updated with credits 
     const res = await axios.post('/api/stripe', token);
+    // send the updated user to Redux
     dispatch({ type: FETCH_USER, payload: res.data });
 };
