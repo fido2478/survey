@@ -11,6 +11,8 @@ $ npm install --save mongoose
 $ npm install --save cookie-session
 $ sudo npm install -g create-react-app
 $ npm install --save concurrently
+$ npm install --save stripe
+$ npm install --save body-parser
 ```
 nodemon is optional, which helps you to get around reruning the app whenever you change your code.
 If you run into an error "Unhandled rejection Error: EISDIR: illegal operation on a directory...",
@@ -20,6 +22,9 @@ downgrade npm to 6.4.1 by running npm install npm@6.4.1
 $ rm client/src/index.js client/src/App.js 
 $ cd client
 client $ npm install --save redux react-redux react-router-dom
+client $ npm install --save materialize-css@next
+client $ npm install --save axios redux-thunk
+client $ npm install --save react-stripe-checkout
 ```
 
 ## Execution
