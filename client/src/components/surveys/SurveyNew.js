@@ -17,12 +17,14 @@ class SurveyNew extends Component {
     }
 
     return (
+      // Add Class
       <SurveyForm
         onSurveySubmit={() => this.setState({ showFormReview: true })}
       />
     );
   }
 
+  // this function is called as default
   render() {
     return (
       <div>
@@ -32,6 +34,7 @@ class SurveyNew extends Component {
   }
 }
 
+// reduxForm allows us to communicate with Redux Store
 export default reduxForm({
   form: 'surveyForm'
 })(SurveyNew);

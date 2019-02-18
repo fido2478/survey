@@ -9,11 +9,14 @@ import formFields from './formFields';
 
 class SurveyForm extends Component {
   renderFields() {
+    // take out each element from formFields and apply <Field
     return _.map(formFields, ({ label, name }) => {
       return (
+        // type, component, name are essential and name is used to track a form
+        // key is required in Field and its value should be unique
         <Field
           key={name}
-          component={SurveyField}
+          component={SurveyField} 
           type="text"
           label={label}
           name={name}
@@ -25,6 +28,7 @@ class SurveyForm extends Component {
   render() {
     return (
       <div>
+        {/* whenever submitting a form, it automatically pass in the func defined */}
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
           <Link to="/surveys" className="red btn-flat white-text">
@@ -40,7 +44,10 @@ class SurveyForm extends Component {
   }
 }
 
+// make sure recipients are separated by comma
+// make sure it has email format
 function validate(values) {
+  // values include all fields
   const errors = {};
 
   errors.recipients = validateEmails(values.recipients || '');
@@ -51,11 +58,14 @@ function validate(values) {
     }
   });
 
+  // if there is anything invalid, return it
   return errors;
 }
 
 export default reduxForm({
   validate,
+  // tell Redux form to handle an object named surveyForm
   form: 'surveyForm',
+  // tell Redux not to dump the values out when getting out the page
   destroyOnUnmount: false
 })(SurveyForm);

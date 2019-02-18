@@ -6,6 +6,7 @@ import formFields from './formFields';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
+// instead of receiving the whole prop, pass in parsed arguments we're interested in
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
@@ -39,8 +40,11 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   );
 };
 
+// take state and pass to props
 function mapStateToProps(state) {
+  // console.log(state);
+  // -> auth: object, form: object > surveyForm: object
   return { formValues: state.form.surveyForm.values };
 }
-
+// connect allows us to pull data out of Redux
 export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview));
