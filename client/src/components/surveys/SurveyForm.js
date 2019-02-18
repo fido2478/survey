@@ -31,6 +31,8 @@ class SurveyForm extends Component {
         {/* whenever submitting a form, it automatically pass in the func defined */}
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
+          {/* when Cancel is clicked, all data should be dumped out =>
+          destroyOnUnmount: true */}
           <Link to="/surveys" className="red btn-flat white-text">
             Cancel
           </Link>

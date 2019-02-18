@@ -36,5 +36,6 @@ class SurveyNew extends Component {
 
 // reduxForm allows us to communicate with Redux Store
 export default reduxForm({
+  // this time we set destroyOnUnmount: true by unspecifying it
   form: 'surveyForm'
 })(SurveyNew);

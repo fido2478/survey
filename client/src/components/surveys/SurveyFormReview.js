@@ -30,6 +30,10 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
         Back
       </button>
       <button
+      // 1. what happens when actually submit 
+      // 2. Once submitted, all the values should be dumped and
+      // 3. redirect to an appropriate page
+      // history obj is for withRouter
         onClick={() => submitSurvey(formValues, history)}
         className="green btn-flat right white-text"
       >
@@ -47,4 +51,5 @@ function mapStateToProps(state) {
   return { formValues: state.form.surveyForm.values };
 }
 // connect allows us to pull data out of Redux
+//
 export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview));

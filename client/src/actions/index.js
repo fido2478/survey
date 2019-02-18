@@ -20,13 +20,14 @@ export const handleToken = (token) => async dispatch => {
 export const submitSurvey = (values, history) => async dispatch => {
     const res = await axios.post('/api/surveys', values);
   
+    // withRouter
     history.push('/surveys');
     dispatch({ type: FETCH_USER, payload: res.data });
-  };
+};
   
-  export const fetchSurveys = () => async dispatch => {
-    const res = await axios.get('/api/surveys');
-  
-    dispatch({ type: FETCH_SURVEYS, payload: res.data });
-  };
+export const fetchSurveys = () => async dispatch => {
+  const res = await axios.get('/api/surveys');
+
+  dispatch({ type: FETCH_SURVEYS, payload: res.data });
+};
   
