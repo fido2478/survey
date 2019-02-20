@@ -13,6 +13,8 @@ $ sudo npm install -g create-react-app
 $ npm install --save concurrently
 $ npm install --save stripe
 $ npm install --save body-parser
+$ npm install --save sendgrid
+$ npm install --save localtunnel
 ```
 nodemon is optional, which helps you to get around reruning the app whenever you change your code.
 If you run into an error "Unhandled rejection Error: EISDIR: illegal operation on a directory...",
@@ -25,6 +27,7 @@ client $ npm install --save redux react-redux react-router-dom
 client $ npm install --save materialize-css@next
 client $ npm install --save axios redux-thunk
 client $ npm install --save react-stripe-checkout
+client $ npm install --save redux-form
 ```
 
 ## Execution
